@@ -7,21 +7,27 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6E5F500E2A52C37DD608FD11 /* Pods_kuti_social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE8A747FE35155F832D3F4CB /* Pods_kuti_social.framework */; };
 		7DF3C53C1E5DF9A2005D9161 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DF3C53B1E5DF9A2005D9161 /* AppDelegate.swift */; };
-		7DF3C53E1E5DF9A2005D9161 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DF3C53D1E5DF9A2005D9161 /* ViewController.swift */; };
+		7DF3C53E1E5DF9A2005D9161 /* SignInVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DF3C53D1E5DF9A2005D9161 /* SignInVC.swift */; };
 		7DF3C5411E5DF9A2005D9161 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7DF3C53F1E5DF9A2005D9161 /* Main.storyboard */; };
 		7DF3C5431E5DF9A2005D9161 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7DF3C5421E5DF9A2005D9161 /* Assets.xcassets */; };
 		7DF3C5461E5DF9A2005D9161 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7DF3C5441E5DF9A2005D9161 /* LaunchScreen.storyboard */; };
+		7DF3C54E1E5DFB15005D9161 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7DF3C54D1E5DFB15005D9161 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		7DF3C5381E5DF9A2005D9161 /* kuti-social.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "kuti-social.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7DF3C53B1E5DF9A2005D9161 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		7DF3C53D1E5DF9A2005D9161 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		7DF3C53D1E5DF9A2005D9161 /* SignInVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInVC.swift; sourceTree = "<group>"; };
 		7DF3C5401E5DF9A2005D9161 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		7DF3C5421E5DF9A2005D9161 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7DF3C5451E5DF9A2005D9161 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7DF3C5471E5DF9A2005D9161 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7DF3C54D1E5DFB15005D9161 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		BE8A747FE35155F832D3F4CB /* Pods_kuti_social.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_kuti_social.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C5CBE5AB8BAA39E26BF2EB2A /* Pods-kuti-social.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-kuti-social.debug.xcconfig"; path = "Pods/Target Support Files/Pods-kuti-social/Pods-kuti-social.debug.xcconfig"; sourceTree = "<group>"; };
+		CA2691A4DAA7D7713C36206D /* Pods-kuti-social.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-kuti-social.release.xcconfig"; path = "Pods/Target Support Files/Pods-kuti-social/Pods-kuti-social.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +35,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6E5F500E2A52C37DD608FD11 /* Pods_kuti_social.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		368622C5B35E925697EEC9B0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BE8A747FE35155F832D3F4CB /* Pods_kuti_social.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		4CF9E059F4BBEBE3CB70B44E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C5CBE5AB8BAA39E26BF2EB2A /* Pods-kuti-social.debug.xcconfig */,
+				CA2691A4DAA7D7713C36206D /* Pods-kuti-social.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		7DF3C52F1E5DF9A2005D9161 = {
 			isa = PBXGroup;
 			children = (
 				7DF3C53A1E5DF9A2005D9161 /* kuti-social */,
 				7DF3C5391E5DF9A2005D9161 /* Products */,
+				4CF9E059F4BBEBE3CB70B44E /* Pods */,
+				368622C5B35E925697EEC9B0 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,14 +80,39 @@
 		7DF3C53A1E5DF9A2005D9161 /* kuti-social */ = {
 			isa = PBXGroup;
 			children = (
+				7DF3C5511E5E1011005D9161 /* Model */,
+				7DF3C5501E5E1009005D9161 /* View */,
+				7DF3C54F1E5E1002005D9161 /* Controller */,
 				7DF3C53B1E5DF9A2005D9161 /* AppDelegate.swift */,
-				7DF3C53D1E5DF9A2005D9161 /* ViewController.swift */,
 				7DF3C53F1E5DF9A2005D9161 /* Main.storyboard */,
 				7DF3C5421E5DF9A2005D9161 /* Assets.xcassets */,
 				7DF3C5441E5DF9A2005D9161 /* LaunchScreen.storyboard */,
 				7DF3C5471E5DF9A2005D9161 /* Info.plist */,
+				7DF3C54D1E5DFB15005D9161 /* GoogleService-Info.plist */,
 			);
 			path = "kuti-social";
+			sourceTree = "<group>";
+		};
+		7DF3C54F1E5E1002005D9161 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				7DF3C53D1E5DF9A2005D9161 /* SignInVC.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		7DF3C5501E5E1009005D9161 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		7DF3C5511E5E1011005D9161 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +122,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7DF3C54A1E5DF9A2005D9161 /* Build configuration list for PBXNativeTarget "kuti-social" */;
 			buildPhases = (
+				F8DE4E11E53F16F6B99CBADA /* [CP] Check Pods Manifest.lock */,
 				7DF3C5341E5DF9A2005D9161 /* Sources */,
 				7DF3C5351E5DF9A2005D9161 /* Frameworks */,
 				7DF3C5361E5DF9A2005D9161 /* Resources */,
+				1B4F77C706EF934B12C1F9A2 /* [CP] Embed Pods Frameworks */,
+				7D8EC79D69B17ACEF23E3934 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -124,6 +178,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7DF3C54E1E5DFB15005D9161 /* GoogleService-Info.plist in Resources */,
 				7DF3C5461E5DF9A2005D9161 /* LaunchScreen.storyboard in Resources */,
 				7DF3C5431E5DF9A2005D9161 /* Assets.xcassets in Resources */,
 				7DF3C5411E5DF9A2005D9161 /* Main.storyboard in Resources */,
@@ -132,12 +187,60 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		1B4F77C706EF934B12C1F9A2 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-kuti-social/Pods-kuti-social-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7D8EC79D69B17ACEF23E3934 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-kuti-social/Pods-kuti-social-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F8DE4E11E53F16F6B99CBADA /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		7DF3C5341E5DF9A2005D9161 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7DF3C53E1E5DF9A2005D9161 /* ViewController.swift in Sources */,
+				7DF3C53E1E5DF9A2005D9161 /* SignInVC.swift in Sources */,
 				7DF3C53C1E5DF9A2005D9161 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -259,6 +362,7 @@
 		};
 		7DF3C54B1E5DF9A2005D9161 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C5CBE5AB8BAA39E26BF2EB2A /* Pods-kuti-social.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 2ZBJLWH3JB;
@@ -272,6 +376,7 @@
 		};
 		7DF3C54C1E5DF9A2005D9161 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CA2691A4DAA7D7713C36206D /* Pods-kuti-social.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 2ZBJLWH3JB;
@@ -302,6 +407,7 @@
 				7DF3C54C1E5DF9A2005D9161 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
