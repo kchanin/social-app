@@ -10,6 +10,7 @@ import UIKit
 import FBSDKLoginKit
 import FBSDKCoreKit
 import Firebase
+import SwiftKeychainWrapper
 
 class SignInVC: UIViewController {
 
@@ -18,9 +19,18 @@ class SignInVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-    
+        
+        
     }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        if let _ = KeychainWrapper.standard.string(forKey: KEY_UID){
+            print("KUTI: ID found in keychain")
+            performSegue(withIdentifier: "goToFeed", sender: nil)
+        }
+    }
+    
+    
 
 
 
@@ -29,9 +39,9 @@ class SignInVC: UIViewController {
         let facebooklogin = FBSDKLoginManager()
         facebooklogin.logIn(withReadPermissions: ["email"], from: self){(result, error) in
             if error != nil{
-                print ("KUTI: Unable to authenticate with Facebook - \(error)")
+                print ("KUTI: Unable to authenticate with Facebook - \(error)\n")
             }else if result?.isCancelled == true{
-                print ("KUTI: User cancelled FB authenitcation")
+                print ("KUTI: User cancelled FB authenitcation\n")
             }else{
                 print ("KUTI: Successfully authenticated with FB\n")
                 let credential = FIRFacebookAuthProvider.credential(withAccessToken: FBSDKAccessToken.current().tokenString)
@@ -44,9 +54,12 @@ class SignInVC: UIViewController {
     func firebaseAuth(_ credential: FIRAuthCredential){
         FIRAuth.auth()?.signIn(with: credential, completion: {(user, error) in
             if error != nil{
-                print ("KUTI: Unable to authenticate with Firebase - \(error)")
+                print ("KUTI: Unable to authenticate with Firebase - \(error)\n")
             }else{
                 print ("KUTI: Successfully authenticated with Firebase\n")
+                if let user = user{
+                    self.completeSignIn(id: user.uid)
+                }
             }
             })
     }
@@ -65,16 +78,29 @@ class SignInVC: UIViewController {
         FIRAuth.auth()?.signIn(withEmail: email, password: pwd, completion: {(user, error) in
             if error == nil{
                 print ("KUTI: Email User authenticated with Firebase\n")
+                if let user = user{
+                    self.completeSignIn(id: user.uid)
+                }
+
             } else {
                 FIRAuth.auth()?.createUser(withEmail: email, password: pwd, completion: {(user, error) in
                     if error != nil{
                         print ("KUTI: Unable to authenticate with Firebase using email\n")
                     }else{
-                        print ("KUTI: Successfully created user and authenticted with Firebase")
+                        print ("KUTI: Successfully created user and authenticted with Firebase\n")
+                        if let user = user{
+                            self.completeSignIn(id: user.uid)
+                        }
                     }
                 })
             }
         })
+    }
+    
+    func completeSignIn(id: String){
+        let keychainResult = KeychainWrapper.standard.set(id, forKey: KEY_UID)
+        print ("KUTI: Data saved to keychain \(keychainResult)")
+        performSegue(withIdentifier: "goToFeed", sender: nil)
     }
 }
 
