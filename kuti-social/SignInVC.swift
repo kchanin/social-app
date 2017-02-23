@@ -13,6 +13,9 @@ import Firebase
 
 class SignInVC: UIViewController {
 
+    @IBOutlet weak var emailTxtFld: FancyField!
+    @IBOutlet weak var passwordTxtField: FancyField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -48,5 +51,30 @@ class SignInVC: UIViewController {
             })
     }
 
+    @IBAction func emailSignInBtnTapped(_ sender: Any) {
+        guard let email = emailTxtFld.text, !email.isEmpty else{
+            print ("KUTI: The email field needs to be populated\n")
+            return
+        }
+        guard let pwd = passwordTxtField.text, !pwd.isEmpty else{
+            print ("KUTI: The password field needs to be populated\n")
+            return
+        }
+        
+        
+        FIRAuth.auth()?.signIn(withEmail: email, password: pwd, completion: {(user, error) in
+            if error == nil{
+                print ("KUTI: Email User authenticated with Firebase\n")
+            } else {
+                FIRAuth.auth()?.createUser(withEmail: email, password: pwd, completion: {(user, error) in
+                    if error != nil{
+                        print ("KUTI: Unable to authenticate with Firebase using email\n")
+                    }else{
+                        print ("KUTI: Successfully created user and authenticted with Firebase")
+                    }
+                })
+            }
+        })
+    }
 }
 
