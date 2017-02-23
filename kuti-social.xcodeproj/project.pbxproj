@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		6E5F500E2A52C37DD608FD11 /* Pods_kuti_social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE8A747FE35155F832D3F4CB /* Pods_kuti_social.framework */; };
+		7D18906E1E5F4ECC00E74291 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7D18906D1E5F4ECC00E74291 /* GoogleService-Info.plist */; };
 		7DE290AE1E5E6A50005C689A /* FancyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DE290AD1E5E6A50005C689A /* FancyView.swift */; };
 		7DE290B11E5E6B11005C689A /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DE290B01E5E6B11005C689A /* Constants.swift */; };
 		7DE290B31E5E6CF4005C689A /* RoundBtn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DE290B21E5E6CF4005C689A /* RoundBtn.swift */; };
@@ -21,6 +22,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7D18906D1E5F4ECC00E74291 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		7DE290AD1E5E6A50005C689A /* FancyView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FancyView.swift; sourceTree = "<group>"; };
 		7DE290B01E5E6B11005C689A /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		7DE290B21E5E6CF4005C689A /* RoundBtn.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundBtn.swift; sourceTree = "<group>"; };
@@ -105,6 +107,7 @@
 				7DF3C5421E5DF9A2005D9161 /* Assets.xcassets */,
 				7DF3C5441E5DF9A2005D9161 /* LaunchScreen.storyboard */,
 				7DF3C5471E5DF9A2005D9161 /* Info.plist */,
+				7D18906D1E5F4ECC00E74291 /* GoogleService-Info.plist */,
 			);
 			path = "kuti-social";
 			sourceTree = "<group>";
@@ -202,6 +205,7 @@
 				7DF3C5461E5DF9A2005D9161 /* LaunchScreen.storyboard in Resources */,
 				7DF3C5431E5DF9A2005D9161 /* Assets.xcassets in Resources */,
 				7DF3C5411E5DF9A2005D9161 /* Main.storyboard in Resources */,
+				7D18906E1E5F4ECC00E74291 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
