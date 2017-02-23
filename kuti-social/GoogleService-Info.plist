@@ -37,6 +37,6 @@
 	<key>DATABASE_URL</key>
 	<string>https://kuti-social.firebaseio.com</string>
 	<key>CFAppleHelpAnchor</key>
-	<string>test3</string>
+	<string>test4</string>
 </dict>
 </plist>
