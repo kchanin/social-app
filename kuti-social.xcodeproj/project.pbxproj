@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		6E5F500E2A52C37DD608FD11 /* Pods_kuti_social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE8A747FE35155F832D3F4CB /* Pods_kuti_social.framework */; };
+		7D16B9161E5EA47A0072D082 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7D16B9151E5EA47A0072D082 /* GoogleService-Info.plist */; };
 		7DE290AE1E5E6A50005C689A /* FancyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DE290AD1E5E6A50005C689A /* FancyView.swift */; };
 		7DE290B11E5E6B11005C689A /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DE290B01E5E6B11005C689A /* Constants.swift */; };
 		7DE290B31E5E6CF4005C689A /* RoundBtn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DE290B21E5E6CF4005C689A /* RoundBtn.swift */; };
@@ -18,10 +19,10 @@
 		7DF3C5411E5DF9A2005D9161 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7DF3C53F1E5DF9A2005D9161 /* Main.storyboard */; };
 		7DF3C5431E5DF9A2005D9161 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7DF3C5421E5DF9A2005D9161 /* Assets.xcassets */; };
 		7DF3C5461E5DF9A2005D9161 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7DF3C5441E5DF9A2005D9161 /* LaunchScreen.storyboard */; };
-		7DF3C54E1E5DFB15005D9161 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7DF3C54D1E5DFB15005D9161 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7D16B9151E5EA47A0072D082 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		7DE290AD1E5E6A50005C689A /* FancyView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FancyView.swift; sourceTree = "<group>"; };
 		7DE290B01E5E6B11005C689A /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		7DE290B21E5E6CF4005C689A /* RoundBtn.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundBtn.swift; sourceTree = "<group>"; };
@@ -34,7 +35,6 @@
 		7DF3C5421E5DF9A2005D9161 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7DF3C5451E5DF9A2005D9161 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7DF3C5471E5DF9A2005D9161 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		7DF3C54D1E5DFB15005D9161 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		BE8A747FE35155F832D3F4CB /* Pods_kuti_social.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_kuti_social.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C5CBE5AB8BAA39E26BF2EB2A /* Pods-kuti-social.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-kuti-social.debug.xcconfig"; path = "Pods/Target Support Files/Pods-kuti-social/Pods-kuti-social.debug.xcconfig"; sourceTree = "<group>"; };
 		CA2691A4DAA7D7713C36206D /* Pods-kuti-social.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-kuti-social.release.xcconfig"; path = "Pods/Target Support Files/Pods-kuti-social/Pods-kuti-social.release.xcconfig"; sourceTree = "<group>"; };
@@ -107,7 +107,7 @@
 				7DF3C5421E5DF9A2005D9161 /* Assets.xcassets */,
 				7DF3C5441E5DF9A2005D9161 /* LaunchScreen.storyboard */,
 				7DF3C5471E5DF9A2005D9161 /* Info.plist */,
-				7DF3C54D1E5DFB15005D9161 /* GoogleService-Info.plist */,
+				7D16B9151E5EA47A0072D082 /* GoogleService-Info.plist */,
 			);
 			path = "kuti-social";
 			sourceTree = "<group>";
@@ -174,6 +174,7 @@
 					7DF3C5371E5DF9A2005D9161 = {
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = 2ZBJLWH3JB;
+						LastSwiftMigration = 0820;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -201,8 +202,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7DF3C54E1E5DFB15005D9161 /* GoogleService-Info.plist in Resources */,
 				7DF3C5461E5DF9A2005D9161 /* LaunchScreen.storyboard in Resources */,
+				7D16B9161E5EA47A0072D082 /* GoogleService-Info.plist in Resources */,
 				7DF3C5431E5DF9A2005D9161 /* Assets.xcassets in Resources */,
 				7DF3C5411E5DF9A2005D9161 /* Main.storyboard in Resources */,
 			);
@@ -393,11 +394,17 @@
 			baseConfigurationReference = C5CBE5AB8BAA39E26BF2EB2A /* Pods-kuti-social.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = 2ZBJLWH3JB;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = "kuti-social/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.kuti.kuti-social";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -407,7 +414,12 @@
 			baseConfigurationReference = CA2691A4DAA7D7713C36206D /* Pods-kuti-social.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = 2ZBJLWH3JB;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = "kuti-social/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.kuti.kuti-social";
