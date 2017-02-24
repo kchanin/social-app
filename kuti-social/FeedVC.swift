@@ -20,12 +20,11 @@ class FeedVC: UIViewController {
 
     @IBAction func SignOutBtnPressed(_ sender: UIButton) {
         if (KeychainWrapper.standard.removeObject(forKey: KEY_UID)) == true{
-            
+            print("KUTI: Key removed from keychain\n")
             try! FIRAuth.auth()?.signOut()
-            
-            print("KUTI: Key removed from keychain")
-//            performSegue(withIdentifier: "goToSignin", sender: nil)
-            self.dismiss(animated: true, completion: nil)
+            print("KUTI: Signed out of out of Firebase\n")
+
+            self.dismiss(animated: true, completion: nil)            
         }
     }
 }
