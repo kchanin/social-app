@@ -151,12 +151,16 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zp9-js-bzz" customClass="FancyView" customModule="kuti_social" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="65"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sign-out" translatesAutoresizingMaskIntoConstraints="NO" id="0RP-Ig-ruI">
+                                    <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sign-out" translatesAutoresizingMaskIntoConstraints="NO" id="0RP-Ig-ruI">
                                         <rect key="frame" x="16" y="20" width="45" height="38"/>
+                                        <gestureRecognizers/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="45" id="t23-ox-67W"/>
                                             <constraint firstAttribute="height" constant="38" id="ve1-sP-Dhu"/>
                                         </constraints>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="0Sd-Si-x42" appends="YES" id="jd1-5n-cjS"/>
+                                        </connections>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Feed" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x4w-qC-4sl">
                                         <rect key="frame" x="130" y="21" width="60" height="36"/>
@@ -183,6 +187,7 @@
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="add-image" translatesAutoresizingMaskIntoConstraints="NO" id="iey-KU-HgN" customClass="CircleView" customModule="kuti_social" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="49" height="49"/>
                                                 <color key="backgroundColor" red="0.0" green="0.51372549020000002" blue="0.56078431370000004" alpha="1" colorSpace="calibratedRGB"/>
+                                                <gestureRecognizers/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="49" id="FrL-I4-2fw"/>
                                                     <constraint firstAttribute="width" constant="49" id="zkP-hU-iFH"/>
@@ -218,22 +223,22 @@
                                     <constraint firstAttribute="height" constant="65" id="tcH-iu-zHd"/>
                                 </constraints>
                             </view>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="315" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="iLC-vV-NF6">
-                                <rect key="frame" x="0.0" y="162" width="320" height="406"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="315" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="iLC-vV-NF6">
+                                <rect key="frame" x="0.0" y="154" width="320" height="414"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="315" id="CFQ-8z-YUk">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="PostCell" rowHeight="315" id="CFQ-8z-YUk" customClass="PostCell" customModule="kuti_social" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="320" height="315"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="CFQ-8z-YUk" id="D8x-tl-cas">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="314"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="315"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6pI-8V-Cg4" customClass="FancyView" customModule="kuti_social" customModuleProvider="target">
-                                                    <rect key="frame" x="16" y="8" width="288" height="298"/>
+                                                    <rect key="frame" x="16" y="8" width="288" height="299"/>
                                                     <subviews>
                                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Zt8-Hl-okz">
-                                                            <rect key="frame" x="8" y="8" width="272" height="252"/>
+                                                            <rect key="frame" x="8" y="8" width="272" height="253"/>
                                                             <subviews>
                                                                 <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SuD-CM-UXJ">
                                                                     <rect key="frame" x="0.0" y="0.0" width="272" height="60"/>
@@ -251,7 +256,7 @@
                                                                             <color key="textColor" red="0.86666666670000003" green="0.17254901959999999" blue="0.0" alpha="0.87" colorSpace="custom" customColorSpace="displayP3"/>
                                                                             <nil key="highlightedColor"/>
                                                                         </label>
-                                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="empty-heart" translatesAutoresizingMaskIntoConstraints="NO" id="vXK-3h-XTJ" customClass="CircleView" customModule="kuti_social" customModuleProvider="target">
+                                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="empty-heart" translatesAutoresizingMaskIntoConstraints="NO" id="vXK-3h-XTJ">
                                                                             <rect key="frame" x="212" y="0.0" width="60" height="60"/>
                                                                             <constraints>
                                                                                 <constraint firstAttribute="height" constant="60" id="SfV-O8-9l9"/>
@@ -261,18 +266,21 @@
                                                                     </subviews>
                                                                 </stackView>
                                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="vLj-cw-fzQ">
-                                                                    <rect key="frame" x="0.0" y="68" width="272" height="126"/>
+                                                                    <rect key="frame" x="0.0" y="68" width="272" height="127"/>
                                                                 </imageView>
                                                                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Monkey in jelly '85" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="bbU-qc-5IT">
-                                                                    <rect key="frame" x="0.0" y="202" width="272" height="50"/>
+                                                                    <rect key="frame" x="0.0" y="203" width="272" height="50"/>
                                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="zIV-XI-H3u"/>
+                                                                    </constraints>
                                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                                                 </textView>
                                                             </subviews>
                                                         </stackView>
                                                         <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="Xft-8I-kke">
-                                                            <rect key="frame" x="203.5" y="268" width="76.5" height="22"/>
+                                                            <rect key="frame" x="203.5" y="269" width="76.5" height="22"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Likes" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oVa-7Z-kgG">
                                                                     <rect key="frame" x="0.0" y="0.0" width="35.5" height="22"/>
@@ -283,7 +291,7 @@
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="8888" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nWZ-H7-xa1">
                                                                     <rect key="frame" x="40.5" y="0.0" width="36" height="22"/>
                                                                     <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="16"/>
-                                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.54000000000000004" colorSpace="calibratedRGB"/>
+                                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.87" colorSpace="calibratedRGB"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                             </subviews>
@@ -300,6 +308,7 @@
                                                     </constraints>
                                                 </view>
                                             </subviews>
+                                            <color key="backgroundColor" red="0.81176470590000005" green="0.84705882349999995" blue="0.86274509799999999" alpha="1" colorSpace="calibratedRGB"/>
                                             <constraints>
                                                 <constraint firstAttribute="trailing" secondItem="6pI-8V-Cg4" secondAttribute="trailing" constant="16" id="2Bj-pF-a8x"/>
                                                 <constraint firstItem="6pI-8V-Cg4" firstAttribute="leading" secondItem="D8x-tl-cas" secondAttribute="leading" constant="16" id="Zi4-dg-a0P"/>
@@ -307,6 +316,13 @@
                                                 <constraint firstItem="6pI-8V-Cg4" firstAttribute="top" secondItem="D8x-tl-cas" secondAttribute="top" constant="8" id="u2K-GE-YtV"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="caption" destination="bbU-qc-5IT" id="W21-kZ-Xfu"/>
+                                            <outlet property="likesLbl" destination="nWZ-H7-xa1" id="1kk-fN-CY0"/>
+                                            <outlet property="postImg" destination="vLj-cw-fzQ" id="npZ-Ye-cgZ"/>
+                                            <outlet property="profileImg" destination="DhO-ux-8jq" id="L2w-uv-X1w"/>
+                                            <outlet property="usernameLbl" destination="gBe-fG-oak" id="puK-1t-zed"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -318,7 +334,7 @@
                             <constraint firstItem="zp9-js-bzz" firstAttribute="top" secondItem="yq8-yV-si3" secondAttribute="top" id="FzD-TA-Hsn"/>
                             <constraint firstAttribute="trailing" secondItem="nqb-o8-XsT" secondAttribute="trailing" constant="16" id="MMy-c8-dzo"/>
                             <constraint firstItem="iLC-vV-NF6" firstAttribute="leading" secondItem="yq8-yV-si3" secondAttribute="leading" id="Q0W-Pp-Fiy"/>
-                            <constraint firstItem="iLC-vV-NF6" firstAttribute="top" secondItem="nqb-o8-XsT" secondAttribute="bottom" constant="16" id="aQN-FL-TEr"/>
+                            <constraint firstItem="iLC-vV-NF6" firstAttribute="top" secondItem="nqb-o8-XsT" secondAttribute="bottom" constant="8" id="aQN-FL-TEr"/>
                             <constraint firstAttribute="trailing" secondItem="iLC-vV-NF6" secondAttribute="trailing" id="dJj-wQ-SVY"/>
                             <constraint firstItem="zp9-js-bzz" firstAttribute="leading" secondItem="yq8-yV-si3" secondAttribute="leading" id="dR5-dW-BzJ"/>
                             <constraint firstItem="S4z-rV-dQy" firstAttribute="top" secondItem="iLC-vV-NF6" secondAttribute="bottom" id="de0-l6-EeT"/>
@@ -326,12 +342,18 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="feedTblView" destination="iLC-vV-NF6" id="78C-iK-4Cp"/>
                         <segue destination="BYZ-38-t0r" kind="show" identifier="goToSignIn" id="q9t-4x-nvi"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9oy-ey-dxn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="0Sd-Si-x42">
+                    <connections>
+                        <action selector="SignOutBtnPressed:" destination="JbG-47-if8" id="fyM-04-nJv"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="826.875" y="170.07042253521126"/>
+            <point key="canvasLocation" x="962" y="171"/>
         </scene>
     </scenes>
     <resources>

@@ -11,6 +11,8 @@
 		7D18906E1E5F4ECC00E74291 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7D18906D1E5F4ECC00E74291 /* GoogleService-Info.plist */; };
 		7D1890701E5F6D4900E74291 /* FeedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D18906F1E5F6D4900E74291 /* FeedVC.swift */; };
 		7D1890721E5F95EB00E74291 /* CircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D1890711E5F95EB00E74291 /* CircleView.swift */; };
+		7D1890741E5FB99400E74291 /* PostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D1890731E5FB99400E74291 /* PostCell.swift */; };
+		7D1890771E5FCC8600E74291 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D1890761E5FCC8600E74291 /* DataService.swift */; };
 		7DE290AE1E5E6A50005C689A /* FancyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DE290AD1E5E6A50005C689A /* FancyView.swift */; };
 		7DE290B11E5E6B11005C689A /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DE290B01E5E6B11005C689A /* Constants.swift */; };
 		7DE290B31E5E6CF4005C689A /* RoundBtn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DE290B21E5E6CF4005C689A /* RoundBtn.swift */; };
@@ -27,6 +29,8 @@
 		7D18906D1E5F4ECC00E74291 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		7D18906F1E5F6D4900E74291 /* FeedVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedVC.swift; sourceTree = "<group>"; };
 		7D1890711E5F95EB00E74291 /* CircleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleView.swift; sourceTree = "<group>"; };
+		7D1890731E5FB99400E74291 /* PostCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostCell.swift; sourceTree = "<group>"; };
+		7D1890761E5FCC8600E74291 /* DataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
 		7DE290AD1E5E6A50005C689A /* FancyView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FancyView.swift; sourceTree = "<group>"; };
 		7DE290B01E5E6B11005C689A /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		7DE290B21E5E6CF4005C689A /* RoundBtn.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundBtn.swift; sourceTree = "<group>"; };
@@ -73,6 +77,14 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		7D1890751E5FCC6C00E74291 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				7D1890761E5FCC8600E74291 /* DataService.swift */,
+			);
+			name = Services;
+			sourceTree = "<group>";
+		};
 		7DE290AF1E5E6AFB005C689A /* Util */ = {
 			isa = PBXGroup;
 			children = (
@@ -102,6 +114,7 @@
 		7DF3C53A1E5DF9A2005D9161 /* kuti-social */ = {
 			isa = PBXGroup;
 			children = (
+				7D1890751E5FCC6C00E74291 /* Services */,
 				7DE290AF1E5E6AFB005C689A /* Util */,
 				7DF3C5511E5E1011005D9161 /* Model */,
 				7DF3C5501E5E1009005D9161 /* View */,
@@ -133,6 +146,7 @@
 				7DE290B41E5E6E89005C689A /* FancyField.swift */,
 				7DE290B61E5E6FE6005C689A /* FancySignInBtn.swift */,
 				7D1890711E5F95EB00E74291 /* CircleView.swift */,
+				7D1890731E5FB99400E74291 /* PostCell.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -275,10 +289,12 @@
 				7DF3C53E1E5DF9A2005D9161 /* SignInVC.swift in Sources */,
 				7DE290B31E5E6CF4005C689A /* RoundBtn.swift in Sources */,
 				7DF3C53C1E5DF9A2005D9161 /* AppDelegate.swift in Sources */,
+				7D1890771E5FCC8600E74291 /* DataService.swift in Sources */,
 				7D1890701E5F6D4900E74291 /* FeedVC.swift in Sources */,
 				7DE290B71E5E6FE6005C689A /* FancySignInBtn.swift in Sources */,
 				7DE290AE1E5E6A50005C689A /* FancyView.swift in Sources */,
 				7DE290B11E5E6B11005C689A /* Constants.swift in Sources */,
+				7D1890741E5FB99400E74291 /* PostCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
