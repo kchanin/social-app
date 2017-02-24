@@ -184,7 +184,7 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="c4m-0e-X9g">
                                         <rect key="frame" x="8" y="8" width="272" height="49"/>
                                         <subviews>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="add-image" translatesAutoresizingMaskIntoConstraints="NO" id="iey-KU-HgN" customClass="CircleView" customModule="kuti_social" customModuleProvider="target">
+                                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="add-image" translatesAutoresizingMaskIntoConstraints="NO" id="iey-KU-HgN" customClass="CircleView" customModule="kuti_social" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="49" height="49"/>
                                                 <color key="backgroundColor" red="0.0" green="0.51372549020000002" blue="0.56078431370000004" alpha="1" colorSpace="calibratedRGB"/>
                                                 <gestureRecognizers/>
@@ -192,6 +192,9 @@
                                                     <constraint firstAttribute="height" constant="49" id="FrL-I4-2fw"/>
                                                     <constraint firstAttribute="width" constant="49" id="zkP-hU-iFH"/>
                                                 </constraints>
+                                                <connections>
+                                                    <outletCollection property="gestureRecognizers" destination="AOG-Bi-MKs" appends="YES" id="8Xa-18-vJ1"/>
+                                                </connections>
                                             </imageView>
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Add a caption" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6gw-qb-HLz" customClass="FancyField" customModule="kuti_social" customModuleProvider="target">
                                                 <rect key="frame" x="59" y="0.0" width="154" height="49"/>
@@ -210,6 +213,9 @@
                                                     <constraint firstAttribute="width" constant="49" id="G98-Nd-YTI"/>
                                                 </constraints>
                                                 <state key="normal" image="add-post"/>
+                                                <connections>
+                                                    <action selector="postImageBtnPressed:" destination="JbG-47-if8" eventType="touchUpInside" id="h0m-aT-GVV"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -342,7 +348,9 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="commentTxtFld" destination="6gw-qb-HLz" id="HRC-AX-e52"/>
                         <outlet property="feedTblView" destination="iLC-vV-NF6" id="78C-iK-4Cp"/>
+                        <outlet property="imageAdd" destination="iey-KU-HgN" id="t96-d6-cw6"/>
                         <segue destination="BYZ-38-t0r" kind="show" identifier="goToSignIn" id="q9t-4x-nvi"/>
                     </connections>
                 </viewController>
@@ -350,6 +358,11 @@
                 <tapGestureRecognizer id="0Sd-Si-x42">
                     <connections>
                         <action selector="SignOutBtnPressed:" destination="JbG-47-if8" id="fyM-04-nJv"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="AOG-Bi-MKs">
+                    <connections>
+                        <action selector="addPicTapped:" destination="JbG-47-if8" id="quA-Si-g83"/>
                     </connections>
                 </tapGestureRecognizer>
             </objects>
