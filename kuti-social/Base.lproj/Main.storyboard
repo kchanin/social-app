@@ -274,7 +274,7 @@
                                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="vLj-cw-fzQ">
                                                                     <rect key="frame" x="0.0" y="68" width="327" height="224"/>
                                                                 </imageView>
-                                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Monkey in jelly '85" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="bbU-qc-5IT">
+                                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Monkey in jelly '85" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="bbU-qc-5IT">
                                                                     <rect key="frame" x="0.0" y="300" width="327" height="50"/>
                                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                                     <constraints>
@@ -324,6 +324,7 @@
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="caption" destination="bbU-qc-5IT" id="W21-kZ-Xfu"/>
+                                            <outlet property="likeImg" destination="vXK-3h-XTJ" id="1eE-QM-Mfz"/>
                                             <outlet property="likesLbl" destination="nWZ-H7-xa1" id="1kk-fN-CY0"/>
                                             <outlet property="postImg" destination="vLj-cw-fzQ" id="npZ-Ye-cgZ"/>
                                             <outlet property="profileImg" destination="DhO-ux-8jq" id="L2w-uv-X1w"/>

@@ -15,6 +15,9 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIIm
     @IBOutlet weak var imageAdd: CircleView!
     @IBOutlet weak var feedTblView: UITableView!
     @IBOutlet weak var commentTxtFld: FancyField!
+
+    
+    
     
     var posts = [Post]()
     var imagePicker: UIImagePickerController!
@@ -34,6 +37,7 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIIm
         
         DataService.ds.REF_POSTS.observe(.value, with: {(snapshot) in
             if let snapshot = snapshot.children.allObjects as? [FIRDataSnapshot]{
+                self.posts = []
                 for snap in snapshot{
                     print ("SNAP: \(snap)")
                     if let postDict = snap.value as? Dictionary<String, AnyObject>{
@@ -61,6 +65,7 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIIm
 
             if let img = FeedVC.imageCache.object(forKey: posts[indexPath.row].imageURL as NSString){
                 cell.configureCell(post: posts[indexPath.row], img: img)
+//                print("KUTI: Image pulled from NSCACHE")
                 return cell
             }else{
                 cell.configureCell(post: posts[indexPath.row])
@@ -101,6 +106,7 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIIm
     }
     
     @IBAction func postImageBtnPressed(_ sender: Any) {
+        view.endEditing(true)
         guard let caption = commentTxtFld.text, caption != "" else{
             print("KUTI: Caption must entered")
             return
@@ -109,8 +115,7 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIIm
             print("KUTI: Image must be selected")
             return
         }
-        selectedImage = false
-        commentTxtFld.text = ""
+
         if let imgData = UIImageJPEGRepresentation(img, 0.2){
 
             let imageUID = NSUUID().uuidString
@@ -123,10 +128,28 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIIm
                     print("KUTI: Successfully uploaded image to Firebase Storage")
                     let downloadURL = metadata?.downloadURL()?.absoluteString
                     print("KUTI: \(downloadURL)")
+                    if downloadURL != nil{
+                        self.postToFirebase(imageURL: downloadURL!)
+                    }
                 }
             }
         }
+    }
+    
+    func postToFirebase(imageURL: String){
         
+        let post: Dictionary<String, Any> = [
+            "caption": commentTxtFld.text!,
+            "imageURL": imageURL,
+            "likes": 0
+        ]
+        
+        let firebasePost = DataService.ds.REF_POSTS.childByAutoId()
+        firebasePost.setValue(post)
+        
+        selectedImage = false
+        commentTxtFld.text = ""
+        imageAdd.image = UIImage(named: "add-image")
     }
     
     
